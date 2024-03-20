@@ -1590,9 +1590,15 @@
     }
   ],
   "refresh": "",
-  "revision": 1,
+  "revision": 5,
   "schemaVersion": 39,
-  "tags": [],
+  "tags": [
+    "prometheus",
+    "spring-boot",
+    "micrometer",
+    "jdbc",
+    "hikaricp"
+  ],
   "templating": {
     "list": [
       {
