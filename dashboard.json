@@ -1590,7 +1590,7 @@
     }
   ],
   "refresh": "",
-  "revision": 5,
+  "revision": 6,
   "schemaVersion": 39,
   "tags": [
     "prometheus",
