@@ -12,12 +12,6 @@
   "__elements": {},
   "__requires": [
     {
-      "type": "grafana",
-      "id": "grafana",
-      "name": "Grafana",
-      "version": "11.0.0-68002"
-    },
-    {
       "type": "datasource",
       "id": "prometheus",
       "name": "Prometheus",
