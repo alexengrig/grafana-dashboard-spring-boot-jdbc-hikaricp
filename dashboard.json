@@ -1,7 +1,7 @@
 {
   "__inputs": [
     {
-      "name": "DS_PROMETHEUS",
+      "name": "Prometheus",
       "label": "Prometheus",
       "description": "",
       "type": "datasource",
@@ -71,10 +71,7 @@
       "id": 12,
       "panels": [
         {
-          "datasource": {
-            "type": "prometheus",
-            "uid": "${DS_PROMETHEUS}"
-          },
+          "datasource": "Prometheus",
           "description": "History of idle/active.",
           "fieldConfig": {
             "defaults": {
@@ -208,10 +205,7 @@
           },
           "targets": [
             {
-              "datasource": {
-                "type": "prometheus",
-                "uid": "${DS_PROMETHEUS}"
-              },
+              "datasource": "Prometheus",
               "editorMode": "code",
               "expr": "sum(jdbc_connections_active{namespace=\"$namespace\", application=\"$application\", name=\"$jdbc_connection_name\"})",
               "legendFormat": "Active",
@@ -219,10 +213,7 @@
               "refId": "Active"
             },
             {
-              "datasource": {
-                "type": "prometheus",
-                "uid": "${DS_PROMETHEUS}"
-              },
+              "datasource": "Prometheus",
               "editorMode": "code",
               "expr": "sum(jdbc_connections_idle{namespace=\"$namespace\", application=\"$application\", name=\"$jdbc_connection_name\"})",
               "hide": false,
@@ -235,10 +226,7 @@
           "type": "timeseries"
         },
         {
-          "datasource": {
-            "type": "prometheus",
-            "uid": "${DS_PROMETHEUS}"
-          },
+          "datasource": "Prometheus",
           "description": "Current number of active connections that have been allocated from the data source.",
           "fieldConfig": {
             "defaults": {
@@ -283,10 +271,7 @@
           "pluginVersion": "11.0.0-68002",
           "targets": [
             {
-              "datasource": {
-                "type": "prometheus",
-                "uid": "${DS_PROMETHEUS}"
-              },
+              "datasource": "Prometheus",
               "editorMode": "code",
               "expr": "jdbc_connections_active{namespace=\"$namespace\", application=\"$application\", instance=~\"$instance\", name=\"$jdbc_connection_name\"}",
               "legendFormat": "{{instance}}",
@@ -298,10 +283,7 @@
           "type": "stat"
         },
         {
-          "datasource": {
-            "type": "prometheus",
-            "uid": "${DS_PROMETHEUS}"
-          },
+          "datasource": "Prometheus",
           "description": "Number of established but idle connections.",
           "fieldConfig": {
             "defaults": {
@@ -346,10 +328,7 @@
           "pluginVersion": "11.0.0-68002",
           "targets": [
             {
-              "datasource": {
-                "type": "prometheus",
-                "uid": "${DS_PROMETHEUS}"
-              },
+              "datasource": "Prometheus",
               "editorMode": "code",
               "expr": "jdbc_connections_idle{namespace=\"$namespace\", application=\"$application\", instance=~\"$instance\", name=\"$jdbc_connection_name\"}",
               "legendFormat": "{{instance}}",
@@ -361,10 +340,7 @@
           "type": "stat"
         },
         {
-          "datasource": {
-            "type": "prometheus",
-            "uid": "${DS_PROMETHEUS}"
-          },
+          "datasource": "Prometheus",
           "description": "History of min/max.",
           "fieldConfig": {
             "defaults": {
@@ -498,10 +474,7 @@
           },
           "targets": [
             {
-              "datasource": {
-                "type": "prometheus",
-                "uid": "${DS_PROMETHEUS}"
-              },
+              "datasource": "Prometheus",
               "editorMode": "code",
               "expr": "sum(jdbc_connections_max{namespace=\"$namespace\", application=\"$application\", name=\"$jdbc_connection_name\"})",
               "hide": false,
@@ -510,10 +483,7 @@
               "refId": "Max"
             },
             {
-              "datasource": {
-                "type": "prometheus",
-                "uid": "${DS_PROMETHEUS}"
-              },
+              "datasource": "Prometheus",
               "editorMode": "code",
               "expr": "sum(jdbc_connections_min{namespace=\"$namespace\", application=\"$application\", name=\"$jdbc_connection_name\"})",
               "hide": false,
@@ -526,10 +496,7 @@
           "type": "timeseries"
         },
         {
-          "datasource": {
-            "type": "prometheus",
-            "uid": "${DS_PROMETHEUS}"
-          },
+          "datasource": "Prometheus",
           "description": "Maximum number of active connections that can be allocated at the same time.",
           "fieldConfig": {
             "defaults": {
@@ -574,10 +541,7 @@
           "pluginVersion": "11.0.0-68002",
           "targets": [
             {
-              "datasource": {
-                "type": "prometheus",
-                "uid": "${DS_PROMETHEUS}"
-              },
+              "datasource": "Prometheus",
               "editorMode": "code",
               "expr": "jdbc_connections_max{namespace=\"$namespace\", application=\"$application\", instance=~\"$instance\", name=\"$jdbc_connection_name\"}",
               "legendFormat": "{{instance}}",
@@ -589,10 +553,7 @@
           "type": "stat"
         },
         {
-          "datasource": {
-            "type": "prometheus",
-            "uid": "${DS_PROMETHEUS}"
-          },
+          "datasource": "Prometheus",
           "description": "Minimum number of idle connections in the pool.",
           "fieldConfig": {
             "defaults": {
@@ -637,10 +598,7 @@
           "pluginVersion": "11.0.0-68002",
           "targets": [
             {
-              "datasource": {
-                "type": "prometheus",
-                "uid": "${DS_PROMETHEUS}"
-              },
+              "datasource": "Prometheus",
               "editorMode": "code",
               "expr": "jdbc_connections_min{namespace=\"$namespace\", application=\"$application\", instance=~\"$instance\", name=\"$jdbc_connection_name\"}",
               "legendFormat": "{{instance}}",
@@ -668,10 +626,7 @@
       "id": 7,
       "panels": [
         {
-          "datasource": {
-            "type": "prometheus",
-            "uid": "${DS_PROMETHEUS}"
-          },
+          "datasource": "Prometheus",
           "description": "History of idle/active.",
           "fieldConfig": {
             "defaults": {
@@ -821,10 +776,7 @@
           },
           "targets": [
             {
-              "datasource": {
-                "type": "prometheus",
-                "uid": "${DS_PROMETHEUS}"
-              },
+              "datasource": "Prometheus",
               "editorMode": "code",
               "expr": "sum(hikaricp_connections_active{namespace=\"$namespace\", application=\"$application\", pool=\"$hikaricp_connection_name\"})",
               "legendFormat": "Active",
@@ -832,10 +784,7 @@
               "refId": "Active"
             },
             {
-              "datasource": {
-                "type": "prometheus",
-                "uid": "${DS_PROMETHEUS}"
-              },
+              "datasource": "Prometheus",
               "editorMode": "code",
               "expr": "sum(hikaricp_connections_pending{namespace=\"$namespace\", application=\"$application\", pool=\"$hikaricp_connection_name\"})",
               "hide": false,
@@ -844,10 +793,7 @@
               "refId": "Pending"
             },
             {
-              "datasource": {
-                "type": "prometheus",
-                "uid": "${DS_PROMETHEUS}"
-              },
+              "datasource": "Prometheus",
               "editorMode": "code",
               "expr": "sum(hikaricp_connections_idle{namespace=\"$namespace\", application=\"$application\", pool=\"$hikaricp_connection_name\"})",
               "hide": false,
@@ -860,10 +806,7 @@
           "type": "timeseries"
         },
         {
-          "datasource": {
-            "type": "prometheus",
-            "uid": "${DS_PROMETHEUS}"
-          },
+          "datasource": "Prometheus",
           "description": "Active connections.",
           "fieldConfig": {
             "defaults": {
@@ -909,10 +852,7 @@
           "pluginVersion": "11.0.0-68002",
           "targets": [
             {
-              "datasource": {
-                "type": "prometheus",
-                "uid": "${DS_PROMETHEUS}"
-              },
+              "datasource": "Prometheus",
               "editorMode": "code",
               "expr": "hikaricp_connections_active{namespace=\"$namespace\", application=\"$application\", instance=~\"$instance\", pool=\"$hikaricp_connection_name\"}",
               "legendFormat": "{{instance}}",
@@ -924,10 +864,7 @@
           "type": "stat"
         },
         {
-          "datasource": {
-            "type": "prometheus",
-            "uid": "${DS_PROMETHEUS}"
-          },
+          "datasource": "Prometheus",
           "description": "Idle connections.",
           "fieldConfig": {
             "defaults": {
@@ -973,10 +910,7 @@
           "pluginVersion": "11.0.0-68002",
           "targets": [
             {
-              "datasource": {
-                "type": "prometheus",
-                "uid": "${DS_PROMETHEUS}"
-              },
+              "datasource": "Prometheus",
               "editorMode": "code",
               "expr": "hikaricp_connections_idle{namespace=\"$namespace\", application=\"$application\", instance=~\"$instance\", pool=\"$hikaricp_connection_name\"}",
               "legendFormat": "{{instance}}",
@@ -988,10 +922,7 @@
           "type": "stat"
         },
         {
-          "datasource": {
-            "type": "prometheus",
-            "uid": "${DS_PROMETHEUS}"
-          },
+          "datasource": "Prometheus",
           "description": "History of min/max.",
           "fieldConfig": {
             "defaults": {
@@ -1126,10 +1057,7 @@
           },
           "targets": [
             {
-              "datasource": {
-                "type": "prometheus",
-                "uid": "${DS_PROMETHEUS}"
-              },
+              "datasource": "Prometheus",
               "editorMode": "code",
               "expr": "sum(hikaricp_connections_max{namespace=\"$namespace\", application=\"$application\", pool=\"$hikaricp_connection_name\"})",
               "hide": false,
@@ -1138,10 +1066,7 @@
               "refId": "Max"
             },
             {
-              "datasource": {
-                "type": "prometheus",
-                "uid": "${DS_PROMETHEUS}"
-              },
+              "datasource": "Prometheus",
               "editorMode": "code",
               "expr": "sum(hikaricp_connections_min{namespace=\"$namespace\", application=\"$application\", pool=\"$hikaricp_connection_name\"})",
               "hide": false,
@@ -1154,10 +1079,7 @@
           "type": "timeseries"
         },
         {
-          "datasource": {
-            "type": "prometheus",
-            "uid": "${DS_PROMETHEUS}"
-          },
+          "datasource": "Prometheus",
           "description": "Max connections.",
           "fieldConfig": {
             "defaults": {
@@ -1203,10 +1125,7 @@
           "pluginVersion": "11.0.0-68002",
           "targets": [
             {
-              "datasource": {
-                "type": "prometheus",
-                "uid": "${DS_PROMETHEUS}"
-              },
+              "datasource": "Prometheus",
               "editorMode": "code",
               "expr": "hikaricp_connections_max{namespace=\"$namespace\", application=\"$application\", instance=~\"$instance\", pool=\"$hikaricp_connection_name\"}",
               "legendFormat": "{{instance}}",
@@ -1218,10 +1137,7 @@
           "type": "stat"
         },
         {
-          "datasource": {
-            "type": "prometheus",
-            "uid": "${DS_PROMETHEUS}"
-          },
+          "datasource": "Prometheus",
           "description": "Min connections.",
           "fieldConfig": {
             "defaults": {
@@ -1267,10 +1183,7 @@
           "pluginVersion": "11.0.0-68002",
           "targets": [
             {
-              "datasource": {
-                "type": "prometheus",
-                "uid": "${DS_PROMETHEUS}"
-              },
+              "datasource": "Prometheus",
               "editorMode": "code",
               "expr": "hikaricp_connections_min{namespace=\"$namespace\", application=\"$application\", instance=~\"$instance\", pool=\"$hikaricp_connection_name\"}",
               "legendFormat": "{{instance}}",
@@ -1282,10 +1195,7 @@
           "type": "stat"
         },
         {
-          "datasource": {
-            "type": "prometheus",
-            "uid": "${DS_PROMETHEUS}"
-          },
+          "datasource": "Prometheus",
           "description": "History of timeouts.",
           "fieldConfig": {
             "defaults": {
@@ -1466,10 +1376,7 @@
           },
           "targets": [
             {
-              "datasource": {
-                "type": "prometheus",
-                "uid": "${DS_PROMETHEUS}"
-              },
+              "datasource": "Prometheus",
               "editorMode": "code",
               "expr": "sum(irate(hikaricp_connections_usage_seconds_sum{namespace=\"$namespace\", application=\"$application\", instance=~\"$instance\", pool=\"$hikaricp_connection_name\"}[$__rate_interval]) / irate(hikaricp_connections_usage_seconds_count{namespace=\"$namespace\", application=\"$application\", instance=~\"$instance\", pool=\"$hikaricp_connection_name\"}[$__rate_interval]))",
               "legendFormat": "Usage",
@@ -1477,10 +1384,7 @@
               "refId": "Usage"
             },
             {
-              "datasource": {
-                "type": "prometheus",
-                "uid": "${DS_PROMETHEUS}"
-              },
+              "datasource": "Prometheus",
               "editorMode": "code",
               "expr": "sum(irate(hikaricp_connections_acquire_seconds_sum{namespace=\"$namespace\", application=\"$application\", instance=~\"$instance\", pool=\"$hikaricp_connection_name\"}[$__rate_interval]) / irate(hikaricp_connections_acquire_seconds_count{namespace=\"$namespace\", application=\"$application\", instance=~\"$instance\", pool=\"$hikaricp_connection_name\"}[$__rate_interval]))",
               "hide": false,
@@ -1489,10 +1393,7 @@
               "refId": "Acquire"
             },
             {
-              "datasource": {
-                "type": "prometheus",
-                "uid": "${DS_PROMETHEUS}"
-              },
+              "datasource": "Prometheus",
               "editorMode": "code",
               "expr": "sum(irate(hikaricp_connections_creation_seconds_sum{namespace=\"$namespace\", application=\"$application\", instance=~\"$instance\", pool=\"$hikaricp_connection_name\"}[$__rate_interval]) / irate(hikaricp_connections_creation_seconds_count{namespace=\"$namespace\", application=\"$application\", instance=~\"$instance\", pool=\"$hikaricp_connection_name\"}[$__rate_interval]))",
               "hide": false,
@@ -1505,10 +1406,7 @@
           "type": "timeseries"
         },
         {
-          "datasource": {
-            "type": "prometheus",
-            "uid": "${DS_PROMETHEUS}"
-          },
+          "datasource": "Prometheus",
           "description": "Max time on usage.",
           "fieldConfig": {
             "defaults": {
@@ -1555,10 +1453,7 @@
           "pluginVersion": "11.0.0-68002",
           "targets": [
             {
-              "datasource": {
-                "type": "prometheus",
-                "uid": "${DS_PROMETHEUS}"
-              },
+              "datasource": "Prometheus",
               "editorMode": "code",
               "expr": "hikaricp_connections_usage_seconds_max{namespace=\"$namespace\", application=\"$application\", instance=~\"$instance\", pool=\"$hikaricp_connection_name\"}",
               "legendFormat": "{{instance}}",
@@ -1570,10 +1465,7 @@
           "type": "stat"
         },
         {
-          "datasource": {
-            "type": "prometheus",
-            "uid": "${DS_PROMETHEUS}"
-          },
+          "datasource": "Prometheus",
           "description": "Max time on acquiring.",
           "fieldConfig": {
             "defaults": {
@@ -1620,10 +1512,7 @@
           "pluginVersion": "11.0.0-68002",
           "targets": [
             {
-              "datasource": {
-                "type": "prometheus",
-                "uid": "${DS_PROMETHEUS}"
-              },
+              "datasource": "Prometheus",
               "editorMode": "code",
               "expr": "hikaricp_connections_acquire_seconds_max{namespace=\"$namespace\", application=\"$application\", instance=~\"$instance\", pool=\"$hikaricp_connection_name\"}",
               "legendFormat": "{{instance}}",
@@ -1635,10 +1524,7 @@
           "type": "stat"
         },
         {
-          "datasource": {
-            "type": "prometheus",
-            "uid": "${DS_PROMETHEUS}"
-          },
+          "datasource": "Prometheus",
           "description": "Max time on creation.",
           "fieldConfig": {
             "defaults": {
@@ -1685,10 +1571,7 @@
           "pluginVersion": "11.0.0-68002",
           "targets": [
             {
-              "datasource": {
-                "type": "prometheus",
-                "uid": "${DS_PROMETHEUS}"
-              },
+              "datasource": "Prometheus",
               "editorMode": "code",
               "expr": "hikaricp_connections_creation_seconds_max{namespace=\"$namespace\", application=\"$application\", instance=~\"$instance\", pool=\"$hikaricp_connection_name\"}",
               "legendFormat": "{{instance}}",
@@ -1714,10 +1597,7 @@
     "list": [
       {
         "current": {},
-        "datasource": {
-          "type": "prometheus",
-          "uid": "${DS_PROMETHEUS}"
-        },
+        "datasource": "Prometheus",
         "definition": "label_values(jdbc_connections_max, namespace)",
         "description": "Namespace in k8s.",
         "hide": 0,
@@ -1738,10 +1618,7 @@
       },
       {
         "current": {},
-        "datasource": {
-          "type": "prometheus",
-          "uid": "${DS_PROMETHEUS}"
-        },
+        "datasource": "Prometheus",
         "definition": "label_values(jdbc_connections_max{namespace=\"$namespace\"}, application)",
         "description": "Name of Spring Boot Application.",
         "hide": 0,
@@ -1762,10 +1639,7 @@
       },
       {
         "current": {},
-        "datasource": {
-          "type": "prometheus",
-          "uid": "${DS_PROMETHEUS}"
-        },
+        "datasource": "Prometheus",
         "definition": "label_values(jdbc_connections_max{namespace=\"$namespace\", application=\"$application\"}, instance)",
         "description": "Instance of application.",
         "hide": 0,
@@ -1786,10 +1660,7 @@
       },
       {
         "current": {},
-        "datasource": {
-          "type": "prometheus",
-          "uid": "${DS_PROMETHEUS}"
-        },
+        "datasource": "Prometheus",
         "definition": "label_values(jdbc_connections_max{namespace=\"$namespace\",application=\"$application\", instance=~\"$instance\"}, name)",
         "description": "Name of JDBC DataSource.",
         "hide": 0,
@@ -1810,10 +1681,7 @@
       },
       {
         "current": {},
-        "datasource": {
-          "type": "prometheus",
-          "uid": "${DS_PROMETHEUS}"
-        },
+        "datasource": "Prometheus",
         "definition": "label_values(hikaricp_connections_max{namespace=\"$namespace\", application=\"$application\", instance=~\"$instance\"}, pool)",
         "description": "Name of HikariCP.",
         "hide": 0,
