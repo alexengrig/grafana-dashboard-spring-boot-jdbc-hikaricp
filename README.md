@@ -55,7 +55,7 @@ management:
 ## Configure Prometheus Job
 
 Add job with pulling metrics from `/actuator/prometheus`,
-for example, on `localhost:8080`
+for example, on `localhost:8080`:
 
 ```yaml
 scrape_configs:
