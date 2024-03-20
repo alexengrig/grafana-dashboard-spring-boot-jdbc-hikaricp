@@ -17,6 +17,10 @@ metrics from
 and
 [HikariCP](https://github.com/brettwooldridge/HikariCP).
 
+Supported Spring Boot `3.x`.
+
+See details in [GitHub](https://github.com/alexengrig/grafana-dashboard-spring-boot-jdbc-hikaricp).
+
 ## Configure Spring Boot Application
 
 1. Add one of Spring Boot database modules, for example,
