@@ -11,8 +11,7 @@ of
 (by
 [Micrometer](https://micrometer.io)
 metrics from
-[Prometheus](https://prometheus.io)
-) for
+[Prometheus](https://prometheus.io)) for
 [JDBC](https://en.wikipedia.org/wiki/Java_Database_Connectivity)
 and
 [HikariCP](https://github.com/brettwooldridge/HikariCP).
