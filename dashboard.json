@@ -195,7 +195,8 @@
               "calcs": [],
               "displayMode": "table",
               "placement": "right",
-              "showLegend": true
+              "showLegend": true,
+              "width": 80
             },
             "tooltip": {
               "maxHeight": 600,
@@ -464,7 +465,8 @@
               "calcs": [],
               "displayMode": "table",
               "placement": "right",
-              "showLegend": true
+              "showLegend": true,
+              "width": 80
             },
             "tooltip": {
               "maxHeight": 600,
@@ -765,7 +767,8 @@
               "calcs": [],
               "displayMode": "table",
               "placement": "right",
-              "showLegend": true
+              "showLegend": true,
+              "width": 80
             },
             "tooltip": {
               "maxHeight": 600,
@@ -1043,7 +1046,8 @@
               "calcs": [],
               "displayMode": "table",
               "placement": "right",
-              "showLegend": true
+              "showLegend": true,
+              "width": 80
             },
             "tooltip": {
               "maxHeight": 600,
@@ -1359,7 +1363,8 @@
               "calcs": [],
               "displayMode": "table",
               "placement": "right",
-              "showLegend": true
+              "showLegend": true,
+              "width": 80
             },
             "tooltip": {
               "maxHeight": 600,
@@ -1580,7 +1585,7 @@
     }
   ],
   "refresh": "",
-  "revision": 7,
+  "revision": 8,
   "schemaVersion": 39,
   "tags": [
     "prometheus",
